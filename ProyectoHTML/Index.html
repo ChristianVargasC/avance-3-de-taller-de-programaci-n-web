@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Your Food</title>
+
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+            color: midnightblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAV */
+        .tabla-nav {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+        }
+
+        .tabla-nav th {
+            padding: 20px;
+        }
+
+        .tabla-nav a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* TARJETAS */
+        .card {
+            background-color: white;
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;         /* altura fija */
+            border-radius: 20px;
+            object-fit: cover;     /* evita que se voltee o deforme */
+            object-position: center;
+        }
+
+        .card h2 a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            color: blue;
+            background-color: white;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        /* ---------------------- */
+        /*       RESPONSIVE       */
+        /* ---------------------- */
+
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .card img {
+                width: 100%;
+                height: 250px; /* ajusta imagen sin voltearla */
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .tabla-nav th {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .card img {
+                height: 220px; /* misma orientación */
+            }
+
+            .tabla-nav a {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<table class="tabla-nav">
+    <tr>
+        <th><a href="Index.html">Inicio</a></th>
+        <th><a href="Pedido.html">Pedido</a></th>
+        <th><a href="Pedidos.html">Pedidos</a></th>
+        <th><a href="Login.html">Loguearse</a></th>
+        <th><a href="Registrar.html">Registro</a></th>
+    </tr>
+</table>
+
+<!-- CONTENIDO PRINCIPAL -->
+<section>
+
+    <h1 style="color: blue;"><u>Bienvenido a Order Your Food!</u></h1>
+
+    <p>
+        Order Your Food es una plataforma de pedidos en línea que conecta a los usuarios con la auténtica gastronomía del Perú.
+        Disfruta de los sabores de la costa, sierra, selva y pollerías tradicionales.
+    </p>
+
+    <!-- TARJETA 1 -->
+    <div class="card">
+        <h2><a href="MenuLaSelva.html">La Selva</a></h2>
+        <img src="C:/Users/ALONDRA/Downloads/restaurante-la-selva.jpg">
+        <p>
+            En 2018 abrió La Selva en Iquitos, un espacio dedicado a platos amazónicos como el juane, tacacho con cecina
+            e inchicapi. Difunde la riqueza cultural y gastronómica amazónica.
+        </p>
+    </div>
+
+    <!-- TARJETA 2 -->
+    <div class="card">
+        <h2><a href="MenuLaCusqueña.html">La Cusqueña</a></h2>
+        <img src="C:/Users/ALONDRA/Downloads/restaurant-la-sierra.jpg">
+        <p>
+            Fundado en 2015, Sabor Andino rescata la tradición ancestral con platos como pachamanca,
+            cuy chactado y trucha frita, famosos en la gastronomía andina.
+        </p>
+    </div>
+
+    <!-- TARJETA 3 -->
+    <div class="card">
+        <h2><a href="MenuLaCosta.html">La Costa</a></h2>
+        <img src="C:/Users/ALONDRA/Downloads/restaurant-la-costa.jpg">
+        <p>
+            Desde 2012, La Costa ofrece lo mejor de la cocina marina peruana: ceviche, arroz con mariscos y tiraditos,
+            combinando frescura y tradición.
+        </p>
+    </div>
+
+    <!-- TARJETA 4 (NORKY'S) -->
+    <div class="card">
+        <h2><a href="MenuNorkys.html">Norky's</a></h2>
+        <img src="C:/Users/ALONDRA/Downloads/restauran-norkys.jpg">
+        <p>
+            Desde 1976, Norky's es ícono del pollo a la brasa peruano, famoso por su receta única, papas fritas
+            y su clásica mayonesa casera.
+        </p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3><strong>Síguenos en nuestras redes sociales:</strong></h3>
+
+    🌐 Página web: www.orderyourfood.pe <br>
+    📘 Facebook: facebook.com/OrderYourFoodPE <br>
+    📸 Instagram: @orderyourfood.pe <br>
+    🐦 Twitter: @OrderFoodPE <br>
+    🎥 TikTok: @orderyourfood_peru <br>
+</footer>
+
+</body>
+</html>

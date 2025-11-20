@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><!--Informacion para el navegador (un nombre a nuestra pestaña)-->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" /> <!-- para las tildes --> <!--define metadatos-->
+    <title> LaSelva | order your food</title>
+    <style>
+    /* ---- ESTILO GENERAL ---- */
+    body {
+        background: linear-gradient(to bottom, #8ed4ff, #cbeaff);
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #033b63;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+        font-weight: 700;
+        color: #003d80;
+    }
+
+    /* ---- NAVBAR ---- */
+    .tabla-nav {
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.12);
+    }
+
+    .tabla-nav th li {
+        list-style: none;
+    }
+
+    .tabla-nav th a {
+        text-decoration: none;
+        color: #0058a3;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px;
+        display: inline-block;
+        transition: 0.2s;
+    }
+
+    .tabla-nav th a:hover {
+        color: #009dff;
+        transform: scale(1.05);
+    }
+
+    /* ---- TARJETAS DE MENÚ ---- */
+    section div {
+        background-color: white;
+        padding: 20px;
+        margin: 30px auto;
+        width: 80%;
+        max-width: 550px;
+        border-radius: 20px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        text-align: center;
+        transition: transform .2s;
+    }
+
+    section div:hover {
+        transform: scale(1.02);
+    }
+
+    img {
+        border-radius: 15px;
+        margin-bottom: 15px;
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* ---- BOTONES ---- */
+    button {
+        background-color: #007fcc;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 12px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.20);
+    }
+
+    button:hover {
+        background-color: #009aff;
+        transform: scale(1.06);
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+        text-align: center;
+        padding: 40px;
+        background-color: white;
+        margin-top: 60px;
+        box-shadow: 0 -4px 8px rgba(0,0,0,0.10);
+        color: #004276;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+</style>
+</head>
+<body> <!--contenido que aparecera en la pagina-->
+    
+    <table class="tabla-nav">
+    <header><!--Es el encabezado-->
+        <nav><!--Para la navegacion-->
+            <ul><!--Lista ordenada-->
+               <tr>
+                   <th><li><a href="file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Index.html">inicio</a></li></th><!--item de la lista--><!--Href especifica el destino de enlace y a es referenciar-->
+                    <th><li><a href="file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Pedido.html" >Pedido</a></li></th>
+                    <th><li><a href="file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Pedidos.html">Pedidos</a></li></th>  
+                    <th><li><a href = "file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Login.html">Loguearse</a></li></th> 
+                    <th><li><a href = "file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Registrar.html">Registro</a></li></th>       
+                </tr>                
+            </ul>
+        </nav>
+    </header>  
+</table>
+    <section>
+        <!--Es informacion principal-->
+    <p><h1><Strong><u style="color: blue;">Menús Principales</u><!--subrayado--></Strong><!--Negrita--> </h1><!--etiqueta de tamaño de texto--></p> <!--Parrafo-->
+    <h1> Tacacho con cecina </h1>
+    <!--Divisor/bloque--><div 
+     class="tacacho"><img
+        src="C:\Users\ALONDRA\Downloads\tacacho con cecina.jpg"width="350" height="300"/><!--class/src son atributos-->
+        <p> Clásico amazónico a base de plátano bellaco asado y majado, acompañado de cecina ahumada y jugosa.</p>
+        <h2>Precio: S/ 28.00 </h2> <button type ="submit">AÑADIR AL PEDIDO</button>
+        </div>
+
+    <h1> <Strong>Juane</Strong> </h1> 
+    <!--Divisor/bloque--><div
+     class="Juane"><img
+        src="C:\Users\ALONDRA\Downloads\juane.jpg"width="350" height="300"/><!--class/src son atributos-->
+        <p>Arroz sazonado con gallina, aceituna y huevo, envuelto en hoja de bijao y cocinado al vapor. Tradicional de San Juan.</p>
+        <h2>Precio: S/ 22.00 </h2> <button type ="submit">AÑADIR AL PEDIDO</button>
+        </div>
+
+    <h1> Patarashca </h1>           
+    <!--Divisor/bloque--><div 
+     class="Patarashca"><img
+        src="C:\Users\ALONDRA\Downloads\Patarashca.jpg"width="350" height="300"/><!--class/src son atributos-->
+        <p>Filete de pescado fresco, sazonado con hierbas amazónicas, envuelto en hoja de bijao y asado a la brasa. </p>
+        <h2>Precio: S/ 30.00 </h2> <button type ="submit">AÑADIR AL PEDIDO</button>
+        
+        </div>       
+
+    <h1> Inchicapi de Gallina</h1> 
+    <!--Divisor/bloque--><div 
+     class="Inchicapi de gallina"><img
+        src="C:\Users\ALONDRA\Downloads\inchicapi_de_gallina_77049_orig.jpg"width="350" height="300"/><!--class/src son atributos-->
+        <p>Sopa cremosa a base de maní, maíz, yuca y gallina, acompañada de hierbas de la selva.</p>
+        <h2>Precio: S/ 18.00 </h2> <button type ="submit">AÑADIR AL PEDIDO</button>
+        </div>
+    <h1> Ensalada de chonta o palmito </h1>       
+    <!--Divisor/bloque--><div 
+     class="Ensalada de chonta o palmito"><img
+        src="C:\Users\ALONDRA\Downloads\images.jpg"width="350" height="300"/><!--class/src son atributos-->
+        <p>Refrescante ensalada preparada con palmito fresco, tomate, cebolla y un toque de limón.</p>
+        <h2>Precio: S/ 15.00 </h2> <button type ="submit">AÑADIR AL PEDIDO</button>
+        </div>                              
+    <h1> Purtumute </h1> 
+    <!--Divisor/bloque--><div 
+     class="Purtumute "><img
+        src="C:\Users\ALONDRA\Downloads\images (1).jpg"width="350" height="300"/><!--class/src son atributos-->
+        <p>Guiso típico elaborado con frejoles, maíz cocido y un aderezo de hierbas regionales.</p>
+        <h2>Precio: S/ 20.00 </h2> <button type ="submit">AÑADIR AL PEDIDO</button>
+        </div>  
+  </section>
+  <footer><!--Es el pie de pagina-->
+
+<br><br><br><br>
+<h3><Strong>Puedes seguirnos a nuestras redes sociales como :</Strong></h3> 
+🌐 Página web: www.LaSelva.pe<br>
+
+📘 Facebook: facebook.com/LaSelvaPE<br>
+
+📸 Instagram: @LaSelva.pe<br>
+
+🐦 Twitter (X): @LaSelvaPE<br>
+
+🎥 TikTok: @LaSelva_peru</p>
+
+
+
+</footer>
+
+<script>
+    // Seleccionamos todos los botones
+    const botones = document.querySelectorAll("button");
+
+    botones.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+
+            alert("✔ Pedido añadido");
+
+            // Buscar el contenedor (div) donde está el botón
+            const card = boton.parentElement;
+
+            // Obtener el nombre del plato (está en el <h1> anterior)
+            const plato = card.previousElementSibling.innerText;
+
+            // Obtener el precio desde el <h2> dentro del mismo div
+            const textoPrecio = card.querySelector("h2").innerText;
+
+            // Extraer solo el número: S/ 28.00 → 28.00
+            const precio = parseFloat(textoPrecio.replace("Precio: S/", ""));
+
+            // Mostrar en consola
+            console.log("🍽 PLATO AÑADIDO:");
+            console.log("Nombre:", plato);
+            console.log("Precio: S/" + precio);
+            console.log("----------------------------");
+        });
+    });
+</script>
+
+
+   </body>
+</html>

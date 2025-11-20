@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <title>Pedido | OrderYourFood</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: skyblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* CONTENEDOR DEL FORMULARIO */
+        .form-container {
+            background-color: white;
+            width: 500px;
+            max-width: 90%;          /* RESPONSIVE */
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 80%;
+            max-width: 300px;         /* Limita tamaño en pantallas grandes */
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #999;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        .success {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ------------------------- */
+        /* 📱 RESPONSIVE MEDIA QUERY */
+        /* ------------------------- */
+        @media (max-width: 480px) {
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 17px;
+            }
+
+            input[type="text"],
+            input[type="number"] {
+                width: 95%;
+                font-size: 14px;
+            }
+
+            button {
+                width: 90%;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FORMULARIO -->
+    <div class="form-container">
+
+        <h1 style="color: blue;"><u>PEDIDO</u></h1>
+
+        <form id="pedidoForm">
+
+            <!-- DATOS DEL CLIENTE -->
+            <label for="cliente">NOMBRE DEL CLIENTE</label><br>
+            <input type="text" id="cliente" name="cliente" placeholder="Ingrese nombre" required><br><br>
+
+            <label for="direccion">DIRECCIÓN</label><br>
+            <input type="text" id="direccion" name="direccion" placeholder="Ingrese dirección" required><br><br>
+
+            <label for="telefono">TELÉFONO</label><br>
+            <input type="text" id="telefono" name="telefono" placeholder="Ingrese teléfono" required><br><br>
+
+            <!-- SELECCIÓN DE PLATOS -->
+            <h2 style="color: blue;"><u>SELECCIÓN DE PLATOS</u></h2>
+
+            <h3>- Arroz con Mariscos - La Costa (s/32)</h3>
+            <label for="cant_mariscos">Cantidad:</label><br>
+            <input type="number" id="cant_mariscos" name="cant_mariscos" min="0" max="99"><br><br>
+
+            <h3>- Pollo a la Brasa - Norkys (s/65)</h3>
+            <label for="cant_pollo">Cantidad:</label><br>
+            <input type="number" id="cant_pollo" name="cant_pollo" min="0" max="99"><br><br>
+
+            <!-- CHECKBOX -->
+            <label>
+                <input type="checkbox" id="terminos" name="terminos" required>
+                Acepto los términos y condiciones
+            </label>
+
+            <!-- BOTÓN -->
+            <p><button type="submit">ENVIAR PEDIDO</button></p>
+
+            <!-- MENSAJE DE CONFIRMACIÓN -->
+            <p id="mensaje" class="success"></p>
+
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("pedidoForm");
+        const mensaje = document.getElementById("mensaje");
+
+        form.addEventListener("submit", function (evento) {
+            evento.preventDefault(); // evita recargar la página
+
+            mensaje.textContent = "✔ Pedido enviado correctamente";
+
+            calcularTotal();
+        });
+
+        function calcularTotal() {
+
+            let precio1 = 32; // Arroz con Mariscos
+            let precio2 = 65; // Pollo a la Brasa
+
+            let cant1 = parseInt(document.getElementById("cant_mariscos").value) || 0;
+            let cant2 = parseInt(document.getElementById("cant_pollo").value) || 0;
+
+            let subtotal1 = cant1 * precio1;
+            let subtotal2 = cant2 * precio2;
+            let totalGeneral = subtotal1 + subtotal2;
+
+            console.log("🧾 RESUMEN DEL PEDIDO");
+            console.log("Arroz con Mariscos (s/32)  x" + cant1 + " = S/" + subtotal1);
+            console.log("Pollo a la Brasa (s/65)   x" + cant2 + " = S/" + subtotal2);
+            console.log("--------------------------------------");
+            console.log("TOTAL GENERAL = S/" + totalGeneral);
+        }
+    </script>
+
+</body>
+
+</html>

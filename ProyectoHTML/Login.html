@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <title>Login | OrderYourFood</title>
+
+    <style>
+        /* Fondo celeste SUAVE */
+        body {
+            background: #9bd2ff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Ayuda en celulares */
+        }
+
+        /* Cuadro blanco centrado */
+        .login-box {
+            background: white;
+            width: 350px;
+            max-width: 100%; /* RESPONSIVE */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        h1 {
+            color: #0047ff;
+            margin-bottom: 25px;
+            font-size: 26px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            color: #00356b;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 8px;
+            border: 1px solid #7ab6e6;
+        }
+
+        /* Botón INGRESAR */
+        .btn-ingresar {
+            width: 100%;
+            margin-top: 20px;
+            background: #006cd9;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Botón REGISTRARSE */
+        .btn-registrarse {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            background: #007bce;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* ------------------------------- */
+        /* 👇 RESPONSIVE DESIGN 👇 */
+        /* ------------------------------- */
+        @media (max-width: 480px) {
+            .login-box {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            input {
+                font-size: 14px;
+                padding: 9px;
+            }
+
+            .btn-ingresar, .btn-registrarse {
+                font-size: 15px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h1>LOGUEARSE</h1>
+
+         <form onsubmit="return mostrarBienvenida()" action="file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Index.html">
+
+            <label>USUARIO</label>
+            <input type="text" placeholder="Ingrese usuario" required>
+
+            <label>CONTRASEÑA</label>
+            <input type="password" placeholder="Ingrese contraseña" required>
+
+          <button type="submit" class="btn-ingresar">INGRESAR</button>
+        </form>
+
+        <a href="file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Registrar.html" class="btn-registrarse">
+            REGISTRARSE
+        </a>
+    </div>
+<script>
+function mostrarBienvenida() {
+    alert("¡Bienvenido!");
+    return true; // Permite que redirija al Index
+}
+</script>
+
+</body>
+</html>

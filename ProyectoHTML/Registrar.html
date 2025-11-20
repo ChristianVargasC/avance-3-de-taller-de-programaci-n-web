@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" /> <!-- para las tildes --> <!--define metadatos-->
+    <title>Registrar | OrderYourFood</title>
+
+    <style>
+        /* Fondo celeste suave */
+        body {
+            background: #9bd2ff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Cuadro blanco centrado */
+        .register-box {
+            background: white;
+            width: 380px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        h1 {
+            color: #0047ff;
+            margin-bottom: 25px;
+            font-size: 26px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            color: #00356b;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 8px;
+            border: 1px solid #7ab6e6;
+        }
+
+        /* Botón REGISTRAR */
+        .btn-registrar {
+            width: 100%;
+            margin-top: 20px;
+            background: #006cd9;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Botón LOGIN */
+        .btn-login {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            background: #007bce;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-box">
+        <h1>REGISTRO</h1>
+
+        <form action="file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Registrar.html" method="post">
+
+            <label>NOMBRE COMPLETO:</label>
+            <input type="text" placeholder="Ingrese nombre" required>
+
+            <label>CORREO ELECTRÓNICO:</label>
+            <input type="email" placeholder="Ingrese correo electrónico" required>
+
+            <label>CONTRASEÑA:</label>
+            <input type="password" placeholder="Ingrese contraseña" required>
+
+            <label>CONFIRMAR CONTRASEÑA:</label>
+            <input type="password" placeholder="Repita la contraseña" required>
+
+            <button type="submit" class="btn-registrar">REGISTRAR</button>
+        </form>
+
+        <a href="file:///C:/Users/ALONDRA/Desktop/ProyectoHTML/Login.html" class="btn-login">LOGIN</a>
+    </div>
+<script>
+    // Seleccionar el formulario
+    const form = document.querySelector("form");
+
+    // Escuchar el evento submit
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault(); // Evita recargar la página
+
+        // Capturar valores ingresados
+        const nombre = form.querySelector('input[type="text"]').value;
+        const correo = form.querySelector('input[type="email"]').value;
+
+        const contraseña = form.querySelectorAll('input[type="password"]')[0].value;
+        const confirmar = form.querySelectorAll('input[type="password"]')[1].value;
+
+        console.log("📌 DATOS INGRESADOS EN REGISTRO:");
+        console.log("Nombre completo:", nombre);
+        console.log("Correo electrónico:", correo);
+        console.log("Contraseña:", contraseña);
+        console.log("Confirmación:", confirmar);
+        console.log("----------------------------------");
+
+        alert("✔ Registro enviado (revisar consola)");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" /> <!-- para las tildes --> <!--define metadatos-->
+    <title>Pedidos | OrderYourFood</title>
+
+    <style>
+        body { 
+            background-color: skyblue;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: midnightblue;
+            text-align: center;
+        }
+
+        /* HEADER */
+        header {
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* CONTENIDO */
+        h1 {
+            margin-top: 30px;
+            font-size: 32px;
+        }
+
+        /* TABLA MODERNA */
+        .tabla {
+            width: 85%;
+            max-width: 1100px;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .tabla th {
+            background-color: midnightblue;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .tabla td {
+            padding: 13px;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Colores según ESTADO */
+        .enviado {
+            color: green;
+            font-weight: bold;
+        }
+
+        .proceso {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .preparando {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Hover fila */
+        .tabla tr:hover td {
+            background-color: #f0f8ff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1><u>PEDIDOS</u></h1>
+
+    <!-- TABLA -->
+    <section>
+        <table class="tabla">
+            <tr>
+                <th>Número de pedido</th>
+                <th>Cliente</th>
+                <th>Platos Seleccionados</th>
+                <th>Total</th>
+                <th>Estado</th>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>ANA LUCIA TORRES HUAMAN</td>
+                <td>1</td>
+                <td>S/22</td>
+                <td class="enviado">ENVIADO</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>CHRISTIAN VARGAS CAÑARI</td>
+                <td>2</td>
+                <td>S/36</td>
+                <td class="proceso">EN PROCESO</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>LUIS MIGUEL SÁNCHEZ MAMANI</td>
+                <td>1</td>
+                <td>S/20</td>
+                <td class="proceso">EN PROCESO</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>MARIA ALEJANDRA RODRIGUEZ FLORES</td>
+                <td>3</td>
+                <td>S/65</td>
+                <td class="preparando">PREPARANDO</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>PAOLA DEL ROSARIO SÁNCHEZ ABANTO</td>
+                <td>2</td>
+                <td>S/36</td>
+                <td class="preparando">PREPARANDO</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>FELICIA VICTORIA ABAD TORRES</td>
+                <td>4</td>
+                <td>S/120</td>
+                <td class="preparando">PREPARANDO</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>LUIS RODRIGUEZ MALDONADO AVILA</td>
+                <td>3</td>
+                <td>S/36</td>
+                <td class="preparando">PREPARANDO</td>
+            </tr>
+
+        </table>
+    </section>
+  <script>
+
+    // Seleccionar la tabla (todas las filas excepto la primera - encabezado)
+    const filas = document.querySelectorAll(".tabla tr:not(:first-child)");
+
+    filas.forEach(fila => {
+        const columnas = fila.querySelectorAll("td");
+
+        // Extraer datos individuales
+        const numeroPedido = columnas[0].textContent;
+        const cliente = columnas[1].textContent;
+        const platos = columnas[2].textContent;
+        const total = columnas[3].textContent;
+        const estado = columnas[4].textContent;
+
+        // Mostrar en consola
+        console.log(`----------------------------`);
+        console.log(`Número de pedido: ${numeroPedido}`);
+        console.log(`Cliente: ${cliente}`);
+        console.log(`Platos seleccionados: ${platos}`);
+        console.log(`Total: ${total}`);
+        console.log(`Estado: ${estado}`);
+    });
+
+</script>
+
+
+</body>
+</html>
